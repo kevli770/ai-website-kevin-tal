@@ -40,9 +40,9 @@ export function CTAButton({
   const buttonClasses = cn(
     sizeClasses[size],
     "gap-2 font-semibold transition-all hover:scale-105",
-    variant === "primary" && "bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/50",
-    variant === "secondary" && "bg-secondary text-white hover:bg-secondary/90",
-    variant === "outline" && "text-white border-white/30 hover:bg-white/10",
+    variant === "primary" && "bg-primary text-white hover:bg-primary/90 hover:text-white shadow-lg shadow-primary/50 border border-primary",
+    variant === "secondary" && "bg-secondary text-white hover:bg-secondary/90 hover:text-white border border-secondary",
+    variant === "outline" && "text-white border-2 border-primary hover:bg-primary/10 hover:border-primary hover:text-white",
     className
   );
 
