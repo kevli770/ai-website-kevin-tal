@@ -7,7 +7,7 @@ import { GraduationCap, Briefcase, Rocket, Check } from "lucide-react";
 
 export function ServicesSection() {
   return (
-    <SectionContainer spacing="xl" variant="glass" id="services">
+    <SectionContainer spacing="lg" variant="glass" id="services">
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="text-center space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">

@@ -63,7 +63,7 @@ const faqs = [
 
 export function FAQSection() {
   return (
-    <SectionContainer spacing="xl" id="faq">
+    <SectionContainer spacing="lg" id="faq">
       <div className="max-w-4xl mx-auto space-y-12">
         <div className="text-center space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">

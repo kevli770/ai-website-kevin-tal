@@ -6,7 +6,7 @@ import { Quote, TrendingUp, Users, CheckCircle2 } from "lucide-react";
 
 export function CaseStudySection() {
   return (
-    <SectionContainer spacing="xl" variant="glass">
+    <SectionContainer spacing="lg" variant="glass">
       <div className="max-w-7xl mx-auto space-y-12">
         <div className="text-center space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">

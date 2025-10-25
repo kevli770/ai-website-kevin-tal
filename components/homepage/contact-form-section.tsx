@@ -10,13 +10,13 @@ import { Mail, Phone, Calendar } from "lucide-react";
 
 export function ContactFormSection() {
   return (
-    <SectionContainer spacing="xl" variant="gradient" id="contact">
+    <SectionContainer spacing="lg" variant="gradient" id="contact">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center space-y-4 mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+        <div className="text-center space-y-3 mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
             בואו נתחיל לעבוד
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-white/90 max-w-3xl mx-auto">
             מלאו את הפרטים ונחזור אליכם תוך 24 שעות
           </p>
         </div>
@@ -135,7 +135,7 @@ export function ContactFormSection() {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+                className="w-full bg-primary hover:bg-primary/90 text-white font-semibold"
               >
                 שלחו בקשה
               </Button>
