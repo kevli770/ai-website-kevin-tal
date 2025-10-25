@@ -24,7 +24,7 @@ export function Navigation() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-2xl font-bold text-foreground hover:text-primary transition-colors text-center"
+            className="text-2xl font-bold text-white hover:text-primary transition-colors text-center"
           >
             קווין & טל <span className="text-primary">AI</span>
           </Link>
@@ -35,7 +35,7 @@ export function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-foreground/80 hover:text-primary transition-colors font-medium"
+                className="text-white/90 hover:text-primary transition-colors font-medium"
               >
                 {link.label}
               </Link>
@@ -49,7 +49,7 @@ export function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-md text-foreground hover:text-primary hover:bg-muted/50 transition-colors"
+            className="lg:hidden p-2 rounded-md text-white hover:text-primary hover:bg-muted/50 transition-colors"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
