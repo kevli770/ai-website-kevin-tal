@@ -13,7 +13,7 @@ export function Footer() {
           {/* About Column */}
           <div className="space-y-4">
             <h3 className="text-lg font-bold text-foreground">
-              קווין טל וטל חקוקי
+              קווין ליאקס וטל חקוקי
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               מומחי AI ארגוני המסייעים לחברות להפוך AI מתיאוריה למציאות מדידה
@@ -176,13 +176,13 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>© 2025 Kevin Tal & Tal Hakooki. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} קווין ליאקס וטל חקוקי. כל הזכויות שמורות.</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-primary transition-colors">
-              Privacy Policy
+              מדיניות פרטיות
             </Link>
             <Link href="/terms" className="hover:text-primary transition-colors">
-              Terms of Service
+              תנאי שימוש
             </Link>
           </div>
         </div>

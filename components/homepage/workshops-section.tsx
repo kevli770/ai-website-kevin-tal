@@ -7,46 +7,46 @@ import { Clock, Users } from "lucide-react";
 
 const workshops = [
   {
-    title: "ChatGPT למנהלים",
+    title: "GenAI למנהלים והנהלות",
     duration: "חצי יום",
     participants: "10-20 מנהלים",
-    topics: ["prompt engineering", "decision support", "report generation"],
-    imageLabel: "מנהל משתמש ב-AI",
+    topics: ["אסטרטגיית AI", "כלי GenAI למנהלים", "יצירת תוכן אוטומטי"],
+    imageLabel: "מנהלים לומדים GenAI",
   },
   {
-    title: "Midjourney ליצירת תכנים",
+    title: "יצירת תוכן ויזואלי עם AI",
     duration: "יום שלם",
     participants: "8-15 משווקים/מעצבים",
-    topics: ["prompt crafting", "brand consistency", "commercial usage"],
+    topics: ["תמונות AI", "וידאו AI", "כלים ויזואליים"],
     imageLabel: "יצירת תכנים עם AI",
   },
   {
-    title: "Make.com Automation Workshop",
+    title: "אוטומציות No-Code עם AI",
     duration: "יומיים",
-    participants: "6-12 טכנאים/אנליסטים",
-    topics: ["workflow design", "API integration", "error handling"],
-    imageLabel: "תרשים זרימת אוטומציה",
+    participants: "6-12 אנליסטים",
+    topics: ["בניית אוטומציות", "אינטגרציות", "זרימות עבודה"],
+    imageLabel: "בניית אוטומציות ללא קוד",
   },
   {
-    title: "Custom GPT Development",
+    title: "פיתוח אפליקציות AI",
     duration: "יום וחצי",
     participants: "5-10 product managers",
-    topics: ["GPT design", "knowledge bases", "actions/APIs"],
-    imageLabel: "ממשק Custom GPT",
+    topics: ["תכנון אפליקציית AI", "No-Code App Creation", "Vibe Coding"],
+    imageLabel: "פיתוח אפליקציות AI",
   },
   {
-    title: "AI for BI Professionals",
+    title: "AI ו-BI לאנליסטים",
     duration: "חצי יום",
     participants: "8-15 BI analysts",
-    topics: ["AI-enhanced analytics", "Qlik Sense + AI", "automated insights"],
-    imageLabel: "דשבורד BI",
+    topics: ["AI עבור אנליטיקה", "דשבורדים AI", "תובנות אוטומטיות"],
+    imageLabel: "AI לאנליטיקה ו-BI",
   },
   {
-    title: "Executive AI Briefing",
-    duration: "3 שעות",
-    participants: "C-level executives",
-    topics: ["AI strategy", "competitive landscape", "risk management"],
-    imageLabel: "חדר ישיבות הנהלה",
+    title: "AI לחינוך ואקדמיה",
+    duration: "יום שלם",
+    participants: "מורים/מרצים",
+    topics: ["כלי AI לחינוך", "יצירת תכנים לימודיים", "מעורבות תלמידים"],
+    imageLabel: "AI בחינוך",
   },
 ];
 
@@ -56,10 +56,10 @@ export function WorkshopsSection() {
       <div className="max-w-7xl mx-auto space-y-12">
         <div className="text-center space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            הסדנאות הפופולריות שלנו
+            הסדנאות והקורסים שלנו
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            למידה מעשית שמתחילה להניב תוצאות כבר באותו יום
+            למידה מעשית מותאמת לקהלים שונים - ממנהלים ועד מורים
           </p>
         </div>
 
@@ -106,7 +106,7 @@ export function WorkshopsSection() {
                 </div>
 
                 <CTAButton
-                  href={`/workshops#${workshop.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  href={`#contact`}
                   variant="outline"
                   size="default"
                   className="w-full"
@@ -119,8 +119,8 @@ export function WorkshopsSection() {
         </div>
 
         <div className="text-center pt-8">
-          <CTAButton href="/workshops" variant="primary" size="lg">
-            צפו בכל הסדנאות שלנו
+          <CTAButton href="#contact" variant="primary" size="lg">
+            בואו נדבר על הסדנה המתאימה לארגון שלכם
           </CTAButton>
         </div>
       </div>

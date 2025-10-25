@@ -24,9 +24,9 @@ export function Navigation() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-2xl font-bold text-foreground hover:text-primary transition-colors"
+            className="text-2xl font-bold text-foreground hover:text-primary transition-colors text-center"
           >
-            Kevin & Tal <span className="text-primary">AI</span>
+            קווין & טל <span className="text-primary">AI</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -16,8 +16,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "טל חקוקי וקווין טל | AI לארגונים",
-  description: "שירותי AI, אוטומציה וליווי ארגוני. הפכנו AI מתיאוריה ליכולת ארגונית מדידה תוך 90 יום.",
+  title: "קווין ליאקס וטל חקוקי | AI לארגונים",
+  description: "שירותי AI, אוטומציה וליווי ארגוני. הופכים AI מתיאוריה למציאות מדידה תוך 90 יום.",
 };
 
 export default function RootLayout({

@@ -44,10 +44,10 @@ export function ServicesSection() {
               <p className="font-semibold text-foreground">מה תלמדו:</p>
               <div className="space-y-2">
                 {[
-                  "שימוש מעשי ב-ChatGPT למשימות יומיומיות",
-                  "יצירת תכנים עם Midjourney",
-                  "אוטומציה עם Make.com",
-                  "פיתוח Custom GPTs",
+                  "שימוש מעשי בכלי GenAI למשימות יומיומיות",
+                  "יצירת תכנים ויזואליים עם AI",
+                  "בניית אוטומציות ללא קוד (No-Code)",
+                  "פיתוח אפליקציות AI מותאמות אישית",
                   "יישום מיידי במקום העבודה",
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-2">

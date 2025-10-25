@@ -34,9 +34,9 @@ export function ImagePlaceholder({
       )}
     >
       <div className="flex flex-col items-center justify-center gap-2 p-4">
-        <ImageIcon className="w-8 h-8 opacity-50" />
+        <ImageIcon className="w-8 h-8 opacity-70" />
         {label && (
-          <span className="text-xs text-center opacity-70">{label}</span>
+          <span className="text-xs text-center opacity-90">{label}</span>
         )}
       </div>
     </div>

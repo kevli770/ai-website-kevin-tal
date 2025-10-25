@@ -68,7 +68,7 @@
 
   /* Muted elements */
   --muted: 217 33% 17%;
-  --muted-foreground: 215 20% 65%;
+  --muted-foreground: 215 30% 75%; /* Increased contrast for better readability */
 
   /* Accent - same as secondary */
   --accent: 217 91% 60%;
@@ -155,6 +155,6 @@
 
   /* Image placeholder styles */
   .image-placeholder {
-    @apply bg-muted/30 border border-border flex items-center justify-center text-muted-foreground;
+    @apply bg-muted/50 border-2 border-border/80 flex items-center justify-center text-muted-foreground;
   }
 }
