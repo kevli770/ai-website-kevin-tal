@@ -25,6 +25,7 @@ export function AboutSection() {
                 src="/kevin.webp"
                 alt="קווין ליאקס - מומחה AI ו-BI"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
                 className="object-cover"
               />
             </div>
@@ -117,6 +118,7 @@ export function AboutSection() {
                 src="/tal.jpg"
                 alt="טל חקוקי - מנהיג AI אסטרטגי"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
                 className="object-cover"
               />
             </div>
