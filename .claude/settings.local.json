@@ -14,7 +14,11 @@
       "Bash(npm run build:*)",
       "Bash(npm install:*)",
       "Bash(npm uninstall:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(node -e:*)",
+      "Read(//c/Users/kevin/Downloads/**)"
     ],
     "deny": [],
     "ask": []

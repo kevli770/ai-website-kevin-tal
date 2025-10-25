@@ -124,13 +124,37 @@
     background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(222.2 84% 3%) 100%);
   }
 
+  .gradient-radial {
+    background: radial-gradient(circle at top right, hsl(var(--primary) / 0.1), transparent 50%),
+                radial-gradient(circle at bottom left, hsl(var(--secondary) / 0.1), transparent 50%);
+  }
+
+  /* Fixed gradient text - now visible with proper fallback */
   .gradient-text {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(to right, hsl(var(--primary)), hsl(var(--secondary)));
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: hsl(var(--primary)); /* Fallback for browsers that don't support background-clip */
+  }
+
+  /* Solid primary color text */
+  .text-primary-solid {
+    @apply text-primary;
   }
 
   /* Glass morphism effect */
   .glass {
     @apply bg-card/50 backdrop-blur-lg border border-border/50;
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20;
+  }
+
+  /* Image placeholder styles */
+  .image-placeholder {
+    @apply bg-muted/30 border border-border flex items-center justify-center text-muted-foreground;
   }
 }
