@@ -178,10 +178,18 @@
     color: hsl(210 40% 98%) !important;
   }
 
-  .section-dark p, .section-dark span, .section-dark div,
-  .section-darker p, .section-darker span, .section-darker div,
-  .section-accent p, .section-accent span, .section-accent div,
-  .gradient-bg p, .gradient-bg span, .gradient-bg div {
+  .section-dark p:not(.text-cyan-300):not(.text-cyan-400):not(.text-primary),
+  .section-dark span:not(.text-cyan-300):not(.text-cyan-400):not(.text-primary):not(.bg-clip-text):not(.bg-gradient-to-r),
+  .section-dark div:not(.text-cyan-300):not(.text-cyan-400):not(.text-primary):not(.bg-clip-text):not(.bg-gradient-to-r),
+  .section-darker p:not(.text-cyan-300):not(.text-cyan-400):not(.text-primary),
+  .section-darker span:not(.text-cyan-300):not(.text-cyan-400):not(.text-primary):not(.bg-clip-text):not(.bg-gradient-to-r),
+  .section-darker div:not(.text-cyan-300):not(.text-cyan-400):not(.text-primary):not(.bg-clip-text):not(.bg-gradient-to-r),
+  .section-accent p:not(.text-cyan-300):not(.text-cyan-400):not(.text-primary),
+  .section-accent span:not(.text-cyan-300):not(.text-cyan-400):not(.text-primary):not(.bg-clip-text):not(.bg-gradient-to-r),
+  .section-accent div:not(.text-cyan-300):not(.text-cyan-400):not(.text-primary):not(.bg-clip-text):not(.bg-gradient-to-r),
+  .gradient-bg p:not(.text-cyan-300):not(.text-cyan-400):not(.text-primary),
+  .gradient-bg span:not(.text-cyan-300):not(.text-cyan-400):not(.text-primary):not(.bg-clip-text):not(.bg-gradient-to-r),
+  .gradient-bg div:not(.text-cyan-300):not(.text-cyan-400):not(.text-primary):not(.bg-clip-text):not(.bg-gradient-to-r) {
     color: hsl(210 40% 95%) !important;
   }
 
@@ -204,10 +212,22 @@
     color: hsl(210 40% 98%) !important;
   }
 
-  /* Keep primary/cyan accent colors visible */
+  /* Keep primary/cyan accent colors visible - OVERRIDE the white forcing */
   .section-dark .text-primary, .section-darker .text-primary, .section-accent .text-primary, .gradient-bg .text-primary,
-  .section-dark .text-cyan-300, .section-darker .text-cyan-300, .section-accent .text-cyan-300, .gradient-bg .text-cyan-300 {
-    /* Let these keep their original colors as they're designed to stand out */
+  .section-dark .text-cyan-300, .section-darker .text-cyan-300, .section-accent .text-cyan-300, .gradient-bg .text-cyan-300,
+  .section-dark .text-cyan-400, .section-darker .text-cyan-400, .section-accent .text-cyan-400, .gradient-bg .text-cyan-400 {
+    color: revert !important; /* Let these keep their original colors */
+  }
+
+  /* Preserve gradient animations - bg-clip-text elements */
+  .section-dark .bg-clip-text, .section-darker .bg-clip-text, .section-accent .bg-clip-text, .gradient-bg .bg-clip-text {
+    color: transparent !important; /* Required for bg-clip-text to work */
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  /* Preserve gradient text in stats cards and headings */
+  .section-dark .bg-gradient-to-r, .section-darker .bg-gradient-to-r, .section-accent .bg-gradient-to-r, .gradient-bg .bg-gradient-to-r {
+    /* Don't override - let gradient show through */
   }
 
   /* Fixed gradient text - now visible with proper fallback */
