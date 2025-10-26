@@ -173,33 +173,40 @@
   /* Ensure ALL text in sections is visible - comprehensive overrides */
   .section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4, .section-dark h5, .section-dark h6,
   .section-darker h1, .section-darker h2, .section-darker h3, .section-darker h4, .section-darker h5, .section-darker h6,
-  .section-accent h1, .section-accent h2, .section-accent h3, .section-accent h4, .section-accent h5, .section-accent h6 {
+  .section-accent h1, .section-accent h2, .section-accent h3, .section-accent h4, .section-accent h5, .section-accent h6,
+  .gradient-bg h1, .gradient-bg h2, .gradient-bg h3, .gradient-bg h4, .gradient-bg h5, .gradient-bg h6 {
     color: hsl(210 40% 98%) !important;
   }
 
   .section-dark p, .section-dark span, .section-dark div,
   .section-darker p, .section-darker span, .section-darker div,
-  .section-accent p, .section-accent span, .section-accent div {
+  .section-accent p, .section-accent span, .section-accent div,
+  .gradient-bg p, .gradient-bg span, .gradient-bg div {
     color: hsl(210 40% 95%) !important;
   }
 
   /* Override text-foreground and text-muted in sections */
-  .section-dark .text-foreground, .section-darker .text-foreground, .section-accent .text-foreground {
+  .section-dark .text-foreground, .section-darker .text-foreground, .section-accent .text-foreground, .gradient-bg .text-foreground {
     color: hsl(210 40% 98%) !important;
   }
 
-  .section-dark .text-muted-foreground, .section-darker .text-muted-foreground, .section-accent .text-muted-foreground {
+  .section-dark .text-muted-foreground, .section-darker .text-muted-foreground, .section-accent .text-muted-foreground, .gradient-bg .text-muted-foreground {
     color: hsl(210 40% 90%) !important;
   }
 
   /* Ensure list items are visible */
-  .section-dark li, .section-darker li, .section-accent li {
+  .section-dark li, .section-darker li, .section-accent li, .gradient-bg li {
     color: hsl(210 40% 95%) !important;
   }
 
+  /* Form labels must be white */
+  .section-dark label, .section-darker label, .section-accent label, .gradient-bg label {
+    color: hsl(210 40% 98%) !important;
+  }
+
   /* Keep primary/cyan accent colors visible */
-  .section-dark .text-primary, .section-darker .text-primary, .section-accent .text-primary,
-  .section-dark .text-cyan-300, .section-darker .text-cyan-300, .section-accent .text-cyan-300 {
+  .section-dark .text-primary, .section-darker .text-primary, .section-accent .text-primary, .gradient-bg .text-primary,
+  .section-dark .text-cyan-300, .section-darker .text-cyan-300, .section-accent .text-cyan-300, .gradient-bg .text-cyan-300 {
     /* Let these keep their original colors as they're designed to stand out */
   }
 
@@ -220,6 +227,42 @@
   /* Glass morphism effect */
   .glass {
     @apply bg-card/50 backdrop-blur-lg border border-border/50;
+  }
+
+  /* Ensure glass containers have white text */
+  .glass h1, .glass h2, .glass h3, .glass h4, .glass h5, .glass h6 {
+    @apply text-white;
+  }
+
+  .glass p, .glass span, .glass label {
+    @apply text-white;
+  }
+
+  /* Form inputs on dark backgrounds */
+  .gradient-bg input, .gradient-bg textarea, .gradient-bg select,
+  .section-dark input, .section-dark textarea, .section-dark select,
+  .section-darker input, .section-darker textarea, .section-darker select,
+  .section-accent input, .section-accent textarea, .section-accent select {
+    @apply text-white bg-background/50 border-border/50;
+  }
+
+  /* Select options */
+  .gradient-bg select option, .section-dark select option,
+  .section-darker select option, .section-accent select option {
+    @apply text-white bg-background;
+  }
+
+  .gradient-bg input::placeholder, .gradient-bg textarea::placeholder,
+  .section-dark input::placeholder, .section-dark textarea::placeholder,
+  .section-darker input::placeholder, .section-darker textarea::placeholder,
+  .section-accent input::placeholder, .section-accent textarea::placeholder {
+    @apply text-white/50;
+  }
+
+  /* Checkbox and radio labels */
+  .gradient-bg input[type="checkbox"] + span,
+  .gradient-bg input[type="radio"] + span {
+    @apply text-white;
   }
 
   /* Card hover effect */
