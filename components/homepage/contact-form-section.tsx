@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { ImagePlaceholder } from "@/components/shared/image-placeholder";
 import { Mail, Phone, Calendar, Youtube, MessageCircle } from "lucide-react";
+import Image from "next/image";
 
 export function ContactFormSection() {
   return (
@@ -144,11 +144,15 @@ export function ContactFormSection() {
 
           {/* Contact Info & Image */}
           <div className="space-y-8">
-            <ImagePlaceholder
-              aspectRatio="video"
-              label="תמונת צור קשר / שיתוף פעולה"
-              className="rounded-2xl"
-            />
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/contact-collaboration.png"
+                alt="צוות שיתוף פעולה - אסטרטגיית AI"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
 
             <div className="glass rounded-xl p-6 space-y-3">
               <h3 className="text-2xl font-bold text-foreground">
