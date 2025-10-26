@@ -29,6 +29,7 @@ const workshops = [
     participants: "6-12 אנליסטים",
     topics: ["בניית אוטומציות", "אינטגרציות", "זרימות עבודה"],
     imageLabel: "בניית אוטומציות ללא קוד",
+    imageSrc: "/workshop-automation-nocode.png",
   },
   {
     title: "פיתוח אפליקציות AI",
