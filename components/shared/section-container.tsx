@@ -44,7 +44,7 @@ export function SectionContainer({
         className
       )}
     >
-      <div className={cn(!fullWidth && "container mx-auto px-4 md:px-6")}>
+      <div className={cn(!fullWidth && "container mx-auto px-4 md:px-6", "relative z-10")}>
         {children}
       </div>
     </section>
