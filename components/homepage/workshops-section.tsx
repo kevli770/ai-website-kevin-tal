@@ -52,6 +52,7 @@ const workshops = [
     participants: "מורים/מרצים",
     topics: ["כלי AI לחינוך", "יצירת תכנים לימודיים", "מעורבות תלמידים"],
     imageLabel: "AI בחינוך",
+    imageSrc: "/workshop-ai-education.png",
   },
 ];
 
