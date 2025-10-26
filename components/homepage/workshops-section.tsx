@@ -4,6 +4,7 @@ import { SectionContainer } from "@/components/shared/section-container";
 import { CTAButton } from "@/components/shared/cta-button";
 import { ImagePlaceholder } from "@/components/shared/image-placeholder";
 import { Clock, Users } from "lucide-react";
+import Image from "next/image";
 
 const workshops = [
   {
@@ -12,6 +13,7 @@ const workshops = [
     participants: "10-20 מנהלים",
     topics: ["אסטרטגיית AI", "כלי GenAI למנהלים", "יצירת תוכן אוטומטי"],
     imageLabel: "מנהלים לומדים GenAI",
+    imageSrc: "/workshop-executives-genai.png",
   },
   {
     title: "יצירת תוכן ויזואלי עם AI",
@@ -69,11 +71,23 @@ export function WorkshopsSection() {
               key={index}
               className="glass rounded-xl overflow-hidden card-hover"
             >
-              <ImagePlaceholder
-                aspectRatio="video"
-                label={workshop.imageLabel}
-                className="rounded-none"
-              />
+              {workshop.imageSrc ? (
+                <div className="relative aspect-video">
+                  <Image
+                    src={workshop.imageSrc}
+                    alt={workshop.imageLabel}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
+              ) : (
+                <ImagePlaceholder
+                  aspectRatio="video"
+                  label={workshop.imageLabel}
+                  className="rounded-none"
+                />
+              )}
 
               <div className="p-6 space-y-3">
                 <h3 className="text-2xl font-bold text-foreground">
