@@ -21,6 +21,7 @@ const workshops = [
     participants: "8-15 משווקים/מעצבים",
     topics: ["תמונות AI", "וידאו AI", "כלים ויזואליים"],
     imageLabel: "יצירת תכנים עם AI",
+    imageSrc: "/workshop-visual-content.png",
   },
   {
     title: "אוטומציות No-Code עם AI",
