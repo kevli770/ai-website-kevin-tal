@@ -34,9 +34,9 @@ export function Navigation() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-2xl font-bold text-white hover:text-primary transition-colors text-center"
+            className="text-2xl font-bold text-white hover:text-cyan-400 transition-colors text-center"
           >
-            קווין & טל <span className="text-primary">AI</span>
+            קווין & טל <span className="text-cyan-400">AI</span>
           </Link>
 
           {/* Social Media Icons - Desktop */}
@@ -76,7 +76,7 @@ export function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white/90 hover:text-primary transition-colors font-medium"
+                className="text-white/90 hover:text-cyan-400 transition-colors font-medium"
               >
                 {link.label}
               </Link>
@@ -90,7 +90,7 @@ export function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-md text-white hover:text-primary hover:bg-muted/50 transition-colors"
+            className="lg:hidden p-2 rounded-md text-white hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -135,7 +135,7 @@ export function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="block py-2 text-foreground/80 hover:text-primary transition-colors font-medium text-right"
+                className="block py-2 text-white/80 hover:text-cyan-400 transition-colors font-medium text-right"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

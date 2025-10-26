@@ -128,21 +128,27 @@ export function ServicesSection() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <ImagePlaceholder
-              aspectRatio="video"
-              label="ייעוץ אסטרטגי - פגישת הנהלה"
-              className="rounded-2xl shadow-xl"
-            />
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/executive-strategy-meeting.png"
+                alt="ייעוץ אסטרטגי - פגישת הנהלה"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
           </div>
         </div>
 
         {/* Service 3: Accelerator */}
         <div className="grid lg:grid-cols-2 gap-8 items-center">
-          <div>
-            <ImagePlaceholder
-              aspectRatio="video"
-              label="מאיץ AI - ויזואליזציה של שיגור רקטה/שינוי"
-              className="rounded-2xl shadow-xl"
+          <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+            <Image
+              src="/ai-transformation-rocket.png"
+              alt="מאיץ AI - ויזואליזציה של שיגור רקטה/שינוי"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
 
