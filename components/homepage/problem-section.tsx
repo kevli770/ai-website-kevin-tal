@@ -48,13 +48,14 @@ export function ProblemSection() {
           </div>
 
           <div className="flex justify-center lg:justify-end">
-            <div className="relative aspect-square w-full max-w-md rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative aspect-square w-full max-w-md rounded-2xl overflow-hidden shadow-xl border border-primary/20">
               <Image
                 src="/frustrated-team.png"
                 alt="צוות מתוסכל במשרד - אתגרים בעבודה"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 400px"
+                priority
               />
             </div>
           </div>
