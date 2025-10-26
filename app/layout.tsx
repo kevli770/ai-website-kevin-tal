@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Heebo, Inter } from "next/font/google";
 import "./globals.css";
+import { SuppressHydrationWarnings } from "./suppress-warnings";
 
 // Hebrew font - Heebo
 const heebo = Heebo({
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="he" dir="rtl">
       <body className={`${heebo.variable} ${inter.variable} font-sans`}>
+        <SuppressHydrationWarnings />
         {children}
       </body>
     </html>
