@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { CTAButton } from "@/components/shared/cta-button";
 import { Menu, X, Youtube, MessageCircle, Facebook } from "lucide-react";
@@ -16,6 +16,16 @@ const navLinks = [
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
@@ -24,7 +34,9 @@ export function Navigation() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-2xl font-bold text-white hover:text-primary transition-colors text-center"
+            className={`text-2xl font-bold hover:text-primary transition-colors text-center ${
+              isScrolled ? "text-white" : "text-foreground"
+            }`}
           >
             קווין & טל <span className="text-primary">AI</span>
           </Link>
@@ -66,7 +78,9 @@ export function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white/90 hover:text-primary transition-colors font-medium"
+                className={`hover:text-primary transition-colors font-medium ${
+                  isScrolled ? "text-white/90" : "text-foreground/80"
+                }`}
               >
                 {link.label}
               </Link>
@@ -80,7 +94,9 @@ export function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-md text-white hover:text-primary hover:bg-muted/50 transition-colors"
+            className={`lg:hidden p-2 rounded-md hover:text-primary hover:bg-muted/50 transition-colors ${
+              isScrolled ? "text-white" : "text-foreground"
+            }`}
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
