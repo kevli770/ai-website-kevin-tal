@@ -47,14 +47,16 @@ export function ProblemSection() {
             </div>
           </div>
 
-          <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
-            <Image
-              src="/frustrated-team.png"
-              alt="צוות מתוסכל במשרד - אתגרים בעבודה"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative aspect-square w-full max-w-md rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/frustrated-team.png"
+                alt="צוות מתוסכל במשרד - אתגרים בעבודה"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 400px"
+              />
+            </div>
           </div>
         </div>
       </div>
