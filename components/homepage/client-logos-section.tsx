@@ -15,6 +15,9 @@ const clients = [
 ];
 
 export function ClientLogosSection() {
+  // Duplicate logos 4 times for seamless infinite scroll
+  const duplicatedClients = [...clients, ...clients, ...clients, ...clients];
+
   return (
     <SectionContainer spacing="md" variant="darker" className="border-y border-border/50 overflow-hidden">
       <div className="max-w-7xl mx-auto space-y-6">
@@ -25,9 +28,8 @@ export function ClientLogosSection() {
         {/* Infinite Scrolling Carousel */}
         <div className="relative overflow-hidden w-full">
           <div className="flex gap-12 animate-scroll">
-            {/* First set of logos */}
-            {clients.concat(clients).map((client, index) => (
-              <div key={index} className="flex items-center justify-center shrink-0 min-w-[112px]">
+            {duplicatedClients.map((client, index) => (
+              <div key={`${client}-${index}`} className="flex items-center justify-center shrink-0 w-28">
                 <ImagePlaceholder
                   height="h-16"
                   width="w-28"
@@ -42,16 +44,16 @@ export function ClientLogosSection() {
 
       <style jsx>{`
         @keyframes scroll {
-          from {
+          0% {
             transform: translateX(0);
           }
-          to {
-            transform: translateX(calc(-112px * 8 - 48px * 8));
+          100% {
+            transform: translateX(calc(-112px * 8 - 48px * 7));
           }
         }
 
         .animate-scroll {
-          animation: scroll 40s linear infinite;
+          animation: scroll 30s linear infinite;
           width: max-content;
         }
 
