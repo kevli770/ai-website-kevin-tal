@@ -1,6 +1,6 @@
 import { SectionContainer } from "@/components/shared/section-container";
-import { ImagePlaceholder } from "@/components/shared/image-placeholder";
 import { AlertCircle } from "lucide-react";
+import Image from "next/image";
 
 const problems = [
   "צוותים שרוצים להשתמש ב-AI אבל לא יודעים מאיפה להתחיל",
@@ -47,11 +47,13 @@ export function ProblemSection() {
             </div>
           </div>
 
-          <div>
-            <ImagePlaceholder
-              aspectRatio="portrait"
-              label="צוות מתוסכל / משרד עם אתגרים"
-              className="rounded-2xl shadow-xl"
+          <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+            <Image
+              src="/frustrated-team.png"
+              alt="צוות מתוסכל במשרד - אתגרים בעבודה"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>

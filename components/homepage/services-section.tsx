@@ -4,6 +4,7 @@ import { SectionContainer } from "@/components/shared/section-container";
 import { CTAButton } from "@/components/shared/cta-button";
 import { ImagePlaceholder } from "@/components/shared/image-placeholder";
 import { GraduationCap, Briefcase, Rocket, Check } from "lucide-react";
+import Image from "next/image";
 
 export function ServicesSection() {
   return (
@@ -20,11 +21,13 @@ export function ServicesSection() {
 
         {/* Service 1: Workshops */}
         <div className="grid lg:grid-cols-2 gap-8 items-center">
-          <div>
-            <ImagePlaceholder
-              aspectRatio="video"
-              label="סדנת AI - אולם הדרכה עם משתתפים"
-              className="rounded-2xl shadow-xl"
+          <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+            <Image
+              src="/ai-workshop-training.png"
+              alt="סדנת AI - אולם הדרכה עם משתתפים"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
 
