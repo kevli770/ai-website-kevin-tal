@@ -25,8 +25,8 @@ export function HeroSection() {
       setTimeout(() => {
         setCurrentIndustry((prev) => (prev + 1) % rotatingIndustries.length);
         setIsAnimating(false);
-      }, 500);
-    }, 3000);
+      }, 400);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, []);
@@ -67,7 +67,7 @@ export function HeroSection() {
               </span>
             </span>
             <br />
-            <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-300 bg-clip-text text-transparent animate-gradient-fast bg-300%">
+            <span className="text-white">
               תוך 90 יום
             </span>
             <br />

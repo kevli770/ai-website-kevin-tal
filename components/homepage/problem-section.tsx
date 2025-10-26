@@ -12,35 +12,35 @@ const problems = [
 
 export function ProblemSection() {
   return (
-    <SectionContainer spacing="lg" variant="dark">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+    <SectionContainer spacing="md" variant="dark">
+      <div className="max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
+          <div className="space-y-5">
+            <div className="space-y-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 האם זה <span className="text-primary">מוכר לכם</span>?
               </h2>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-base md:text-lg text-muted-foreground">
                 אתגרים נפוצים שארגונים מתמודדים איתם בדרך ל-AI
               </p>
             </div>
 
             {/* Problems list */}
-            <div className="space-y-4">
+            <div className="space-y-2.5">
               {problems.map((problem, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-4 p-4 rounded-lg bg-destructive/5 border border-destructive/20 hover:border-destructive/40 transition-colors"
+                  className="flex items-start gap-3 p-3 rounded-lg bg-destructive/5 border border-destructive/20 hover:border-destructive/40 transition-colors"
                 >
-                  <AlertCircle className="h-6 w-6 text-destructive shrink-0 mt-1" />
-                  <p className="text-lg text-foreground">{problem}</p>
+                  <AlertCircle className="h-5 w-5 text-destructive shrink-0 mt-0.5" />
+                  <p className="text-sm md:text-base text-foreground">{problem}</p>
                 </div>
               ))}
             </div>
 
             {/* Challenging question */}
-            <div className="pt-4">
-              <p className="text-2xl md:text-3xl font-bold text-foreground">
+            <div className="pt-2">
+              <p className="text-xl md:text-2xl font-bold text-foreground">
                 כמה שעות עבודה שילמת החודש על משימות שאפשר{" "}
                 <span className="text-primary">להוריד ל-10 דקות</span>?
               </p>
