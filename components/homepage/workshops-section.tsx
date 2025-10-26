@@ -45,6 +45,7 @@ const workshops = [
     participants: "8-15 BI analysts",
     topics: ["AI עבור אנליטיקה", "דשבורדים AI", "תובנות אוטומטיות"],
     imageLabel: "AI לאנליטיקה ו-BI",
+    imageSrc: "/workshop-ai-bi-analytics.png",
   },
   {
     title: "AI לחינוך ואקדמיה",
