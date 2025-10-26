@@ -60,7 +60,7 @@ export function HeroSection() {
             <span className="text-white">הטמיעו AI ב</span>
             <span
               className={`inline-block transition-all duration-500 ${isAnimating ? 'opacity-0 -translate-y-4' : 'opacity-100 translate-y-0'}`}
-              style={{ minWidth: '200px', textAlign: 'center' }}
+              style={{ width: '250px', textAlign: 'center', display: 'inline-block' }}
             >
               <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-300 bg-clip-text text-transparent animate-gradient-fast bg-300%">
                 {rotatingIndustries[currentIndustry]}
