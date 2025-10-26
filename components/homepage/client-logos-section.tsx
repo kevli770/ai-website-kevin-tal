@@ -23,22 +23,11 @@ export function ClientLogosSection() {
         </h2>
 
         {/* Infinite Scrolling Carousel */}
-        <div className="relative overflow-hidden">
-          <div className="flex gap-12 w-max animate-scroll">
+        <div className="relative overflow-hidden w-full">
+          <div className="flex gap-12 animate-scroll">
             {/* First set of logos */}
-            {clients.map((client, index) => (
-              <div key={index} className="flex items-center justify-center shrink-0">
-                <ImagePlaceholder
-                  height="h-16"
-                  width="w-28"
-                  label={client}
-                  className="grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
-                />
-              </div>
-            ))}
-            {/* Duplicate set for seamless loop */}
-            {clients.map((client, index) => (
-              <div key={`duplicate-${index}`} className="flex items-center justify-center shrink-0">
+            {clients.concat(clients).map((client, index) => (
+              <div key={index} className="flex items-center justify-center shrink-0 min-w-[112px]">
                 <ImagePlaceholder
                   height="h-16"
                   width="w-28"
@@ -53,16 +42,17 @@ export function ClientLogosSection() {
 
       <style jsx>{`
         @keyframes scroll {
-          0% {
+          from {
             transform: translateX(0);
           }
-          100% {
-            transform: translateX(-50%);
+          to {
+            transform: translateX(calc(-112px * 8 - 48px * 8));
           }
         }
 
         .animate-scroll {
-          animation: scroll 30s linear infinite;
+          animation: scroll 40s linear infinite;
+          width: max-content;
         }
 
         .animate-scroll:hover {
