@@ -70,7 +70,7 @@ export function ValuePropositionSection() {
                   <div className="hidden md:block absolute top-20 right-0 w-full h-0.5 bg-gradient-to-l from-primary/50 to-transparent -z-10" />
                 )}
 
-                <div className="h-full p-8 rounded-xl glass border-2 border-border hover:border-primary/50 transition-all space-y-6">
+                <div className="h-full p-8 rounded-xl glass border-2 border-border hover:border-primary/50 transition-all space-y-6 card-hover-glow">
                   {/* Step number */}
                   <div className="flex items-center gap-4">
                     <div className="text-6xl font-bold text-primary/20">

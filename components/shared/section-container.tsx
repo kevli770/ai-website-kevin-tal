@@ -11,10 +11,10 @@ interface SectionContainerProps {
 }
 
 const spacingClasses = {
-  sm: "py-8 md:py-12",
-  md: "py-12 md:py-16",
-  lg: "py-12 md:py-20",
-  xl: "py-16 md:py-24",
+  sm: "py-6 md:py-8",
+  md: "py-8 md:py-12",
+  lg: "py-10 md:py-14",
+  xl: "py-12 md:py-16",
 };
 
 const variantClasses = {

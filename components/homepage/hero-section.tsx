@@ -4,13 +4,38 @@ import { CTAButton } from "@/components/shared/cta-button";
 import { SectionContainer } from "@/components/shared/section-container";
 import Image from "next/image";
 import { Check, Users, Building2, Rocket } from "lucide-react";
+import { useEffect, useState } from "react";
+
+const rotatingIndustries = [
+  "סטארטאפים",
+  "חברות טכנולוגיה",
+  "ארגונים פיננסיים",
+  "חברות תעשייה",
+  "שירותים מקצועיים",
+  "חברות בריאות",
+];
 
 export function HeroSection() {
+  const [currentIndustry, setCurrentIndustry] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setCurrentIndustry((prev) => (prev + 1) % rotatingIndustries.length);
+        setIsAnimating(false);
+      }, 500);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <SectionContainer
       variant="gradient"
       spacing="sm"
-      className="min-h-[70vh] flex items-center justify-center relative overflow-hidden pt-20"
+      className="min-h-[60vh] flex items-center justify-center relative overflow-hidden pt-16"
       id="hero"
     >
       {/* Subtle grid pattern overlay */}
@@ -19,9 +44,9 @@ export function HeroSection() {
       {/* Background gradient effect */}
       <div className="absolute inset-0 gradient-radial opacity-50" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4">
+      <div className="relative z-10 max-w-4xl mx-auto px-4">
         {/* Text Content - At Top */}
-        <div className="max-w-2xl mx-auto space-y-2.5 text-center mb-5">
+        <div className="max-w-2xl mx-auto space-y-2 text-center mb-4">
           {/* Trust badge with glow effect */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-xs text-white shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300">
             <Check className="h-3 w-3 text-primary" />
@@ -30,10 +55,19 @@ export function HeroSection() {
             </span>
           </div>
 
-          {/* Headline with gradient accent - lighter colors for visibility */}
+          {/* Headline with gradient accent and rotating industry */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
-            <span className="text-white">הטמיעו AI בארגון </span>
-            <span className="bg-gradient-to-r from-cyan-200 via-white to-cyan-300 bg-clip-text text-transparent animate-gradient bg-300%">
+            <span className="text-white">הטמיעו AI ב</span>
+            <span
+              className={`inline-block transition-all duration-500 ${isAnimating ? 'opacity-0 -translate-y-4' : 'opacity-100 translate-y-0'}`}
+              style={{ minWidth: '200px', textAlign: 'center' }}
+            >
+              <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-300 bg-clip-text text-transparent animate-gradient-fast bg-300%">
+                {rotatingIndustries[currentIndustry]}
+              </span>
+            </span>
+            <br />
+            <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-300 bg-clip-text text-transparent animate-gradient-fast bg-300%">
               תוך 90 יום
             </span>
             <br />
@@ -68,7 +102,7 @@ export function HeroSection() {
 
         {/* Images Below Headline - Compact sizing */}
         <div className="flex justify-center items-center gap-3 mb-4">
-          <div className="relative rounded-xl overflow-hidden shadow-lg shadow-primary/20 border-2 border-primary/20 w-20 h-20 sm:w-24 sm:h-24 hover:scale-105 hover:shadow-primary/40 transition-all duration-300 group">
+          <div className="relative rounded-xl overflow-hidden shadow-lg shadow-primary/20 border-2 border-primary/20 w-20 h-20 sm:w-24 sm:h-24 hover:scale-110 hover:shadow-primary/40 hover:shadow-2xl transition-all duration-500 group cursor-pointer">
             <Image
               src="/kevin.webp"
               alt="קווין ליאקס - מומחה AI ו-BI"
@@ -80,7 +114,7 @@ export function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
 
-          <div className="relative rounded-xl overflow-hidden shadow-lg shadow-primary/20 border-2 border-primary/20 w-20 h-20 sm:w-24 sm:h-24 hover:scale-105 hover:shadow-primary/40 transition-all duration-300 group">
+          <div className="relative rounded-xl overflow-hidden shadow-lg shadow-primary/20 border-2 border-primary/20 w-20 h-20 sm:w-24 sm:h-24 hover:scale-110 hover:shadow-primary/40 hover:shadow-2xl transition-all duration-500 group cursor-pointer">
             <Image
               src="/tal.jpg"
               alt="טל חקוקי - מנהיג AI אסטרטגי"

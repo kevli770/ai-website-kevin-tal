@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { ImagePlaceholder } from "@/components/shared/image-placeholder";
-import { Mail, Phone, Calendar } from "lucide-react";
+import { Mail, Phone, Calendar, Youtube, MessageCircle } from "lucide-react";
 
 export function ContactFormSection() {
   return (
@@ -199,6 +199,40 @@ export function ContactFormSection() {
                       className="text-primary hover:underline"
                     >
                       לחצו כאן ליומן שלנו
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center shrink-0">
+                    <Youtube className="w-5 h-5 text-red-500" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">ערוץ YouTube</p>
+                    <a
+                      href="https://youtube.com/@kevintal"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      הצטרפו לערוץ שלנו
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center shrink-0">
+                    <MessageCircle className="w-5 h-5 text-green-500" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">קבוצת WhatsApp</p>
+                    <a
+                      href="https://chat.whatsapp.com/your-group-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      הצטרפו לקהילה שלנו
                     </a>
                   </div>
                 </div>
