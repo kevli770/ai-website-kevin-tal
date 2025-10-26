@@ -37,6 +37,7 @@ const workshops = [
     participants: "5-10 product managers",
     topics: ["תכנון אפליקציית AI", "No-Code App Creation", "Vibe Coding"],
     imageLabel: "פיתוח אפליקציות AI",
+    imageSrc: "/workshop-app-development.png",
   },
   {
     title: "AI ו-BI לאנליסטים",
