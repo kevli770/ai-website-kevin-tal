@@ -57,21 +57,19 @@ export function HeroSection() {
 
           {/* Headline with gradient accent and rotating industry */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
-            <span className="text-white">הטמיעו AI ב</span>
+            <span className="text-white block">הטמיעו AI ב</span>
             <span
-              className={`inline-block transition-all duration-500 ${isAnimating ? 'opacity-0 -translate-y-4' : 'opacity-100 translate-y-0'}`}
-              style={{ width: '250px', textAlign: 'center', display: 'inline-block' }}
+              className={`block transition-all duration-500 ${isAnimating ? 'opacity-0 -translate-y-4' : 'opacity-100 translate-y-0'}`}
+              style={{ whiteSpace: 'nowrap' }}
             >
               <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-cyan-300 bg-clip-text text-transparent animate-gradient-fast bg-300%">
                 {rotatingIndustries[currentIndustry]}
               </span>
             </span>
-            <br />
-            <span className="text-white">
+            <span className="text-white block">
               תוך 90 יום
             </span>
-            <br />
-            <span className="text-white">בלי צוות טכני ובלי לבזבז מיליונים</span>
+            <span className="text-white block">בלי צוות טכני ובלי לבזבז מיליונים</span>
           </h1>
 
           {/* Subtitle - all white text with primary highlights */}
