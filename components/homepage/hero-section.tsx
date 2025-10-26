@@ -33,7 +33,7 @@ export function HeroSection() {
           {/* Headline with gradient accent - lighter colors for visibility */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight">
             <span className="text-white">הטמיעו AI בארגון </span>
-            <span className="bg-gradient-to-r from-cyan-300 via-primary to-blue-300 bg-clip-text text-transparent animate-gradient bg-300%">
+            <span className="bg-gradient-to-r from-cyan-200 via-white to-cyan-300 bg-clip-text text-transparent animate-gradient bg-300%">
               תוך 90 יום
             </span>
             <br />
