@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 interface SectionContainerProps {
   children: ReactNode;
   className?: string;
-  variant?: "default" | "gradient" | "glass";
+  variant?: "default" | "gradient" | "glass" | "dark" | "darker" | "accent";
   spacing?: "sm" | "md" | "lg" | "xl";
   fullWidth?: boolean;
   id?: string;
@@ -21,6 +21,9 @@ const variantClasses = {
   default: "",
   gradient: "gradient-bg",
   glass: "glass",
+  dark: "section-dark",
+  darker: "section-darker",
+  accent: "section-accent",
 };
 
 export function SectionContainer({

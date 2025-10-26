@@ -129,6 +129,39 @@
                 radial-gradient(circle at bottom left, hsl(var(--secondary) / 0.1), transparent 50%);
   }
 
+  /* Alternating section backgrounds for better separation */
+  .section-dark {
+    background: hsl(222.2 84% 4.9%); /* Same as --background */
+  }
+
+  .section-darker {
+    background: hsl(222.2 84% 3%); /* Slightly darker */
+    position: relative;
+  }
+
+  .section-darker::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 50%, hsl(var(--primary) / 0.03), transparent 50%),
+                radial-gradient(circle at 80% 50%, hsl(var(--secondary) / 0.03), transparent 50%);
+    pointer-events: none;
+  }
+
+  /* Accent gradient section */
+  .section-accent {
+    background: linear-gradient(135deg, hsl(222.2 84% 5%) 0%, hsl(217 91% 7%) 100%);
+    position: relative;
+  }
+
+  .section-accent::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, hsl(var(--primary) / 0.05), transparent 40%);
+    pointer-events: none;
+  }
+
   /* Fixed gradient text - now visible with proper fallback */
   .gradient-text {
     background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
@@ -174,5 +207,54 @@
 
   .bg-300\% {
     background-size: 300% 300%;
+  }
+
+  /* Floating animation for modern elements */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Pulse glow animation */
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(0, 128, 255, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(0, 128, 255, 0.6);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Shimmer effect for modern look */
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0, 128, 255, 0.1) 50%,
+      transparent 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 3s infinite;
   }
 }

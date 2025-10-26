@@ -52,7 +52,7 @@ const workshops = [
 
 export function WorkshopsSection() {
   return (
-    <SectionContainer spacing="lg" id="workshops">
+    <SectionContainer spacing="lg" variant="dark" id="workshops">
       <div className="max-w-7xl mx-auto space-y-12">
         <div className="text-center space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">

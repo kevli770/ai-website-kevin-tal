@@ -16,7 +16,7 @@ const clients = [
 
 export function ClientLogosSection() {
   return (
-    <SectionContainer spacing="md" className="border-y border-border/50">
+    <SectionContainer spacing="md" variant="darker" className="border-y border-border/50">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 text-foreground">
           הם כבר סמכו עלינו

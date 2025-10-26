@@ -12,7 +12,7 @@ const problems = [
 
 export function ProblemSection() {
   return (
-    <SectionContainer spacing="lg" variant="glass">
+    <SectionContainer spacing="lg" variant="dark">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">

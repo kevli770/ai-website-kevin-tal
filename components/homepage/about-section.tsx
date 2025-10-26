@@ -6,7 +6,7 @@ import { Bot, Zap, BarChart3, Sparkles, Target, Users } from "lucide-react";
 
 export function AboutSection() {
   return (
-    <SectionContainer spacing="lg" id="about">
+    <SectionContainer spacing="lg" variant="accent" id="about">
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="text-center space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">

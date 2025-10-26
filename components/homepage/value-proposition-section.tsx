@@ -40,7 +40,7 @@ const steps = [
 
 export function ValuePropositionSection() {
   return (
-    <SectionContainer spacing="lg">
+    <SectionContainer spacing="lg" variant="darker">
       <div className="space-y-12">
         {/* Header */}
         <div className="text-center space-y-6 max-w-3xl mx-auto">
