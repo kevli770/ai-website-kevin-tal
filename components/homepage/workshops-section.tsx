@@ -52,13 +52,13 @@ const workshops = [
 
 export function WorkshopsSection() {
   return (
-    <SectionContainer spacing="lg" variant="dark" id="workshops">
-      <div className="max-w-7xl mx-auto space-y-12">
-        <div className="text-center space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+    <SectionContainer spacing="md" variant="dark" id="workshops">
+      <div className="max-w-5xl mx-auto space-y-8">
+        <div className="text-center space-y-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             הסדנאות והקורסים שלנו
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
             למידה מעשית מותאמת לקהלים שונים - ממנהלים ועד מורים
           </p>
         </div>
@@ -75,7 +75,7 @@ export function WorkshopsSection() {
                 className="rounded-none"
               />
 
-              <div className="p-6 space-y-4">
+              <div className="p-6 space-y-3">
                 <h3 className="text-2xl font-bold text-foreground">
                   {workshop.title}
                 </h3>

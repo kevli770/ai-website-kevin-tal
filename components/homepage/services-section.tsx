@@ -7,19 +7,19 @@ import { GraduationCap, Briefcase, Rocket, Check } from "lucide-react";
 
 export function ServicesSection() {
   return (
-    <SectionContainer spacing="lg" variant="darker" id="services">
-      <div className="max-w-7xl mx-auto space-y-16">
-        <div className="text-center space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+    <SectionContainer spacing="md" variant="darker" id="services">
+      <div className="max-w-5xl mx-auto space-y-8">
+        <div className="text-center space-y-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             השירותים שלנו
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             מהדרכה מעשית ועד שינוי ארגוני מלא - בחרו את המסלול המתאים לכם
           </p>
         </div>
 
         {/* Service 1: Workshops */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div>
             <ImagePlaceholder
               aspectRatio="video"
@@ -28,21 +28,21 @@ export function ServicesSection() {
             />
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                <GraduationCap className="w-6 h-6 text-primary" />
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <GraduationCap className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="text-3xl font-bold text-foreground">סדנאות AI וקורסים ארגוניים</h3>
+              <h3 className="text-2xl font-bold text-foreground">סדנאות AI וקורסים ארגוניים</h3>
             </div>
 
-            <p className="text-lg text-foreground/80 leading-relaxed">
+            <p className="text-base text-foreground/80 leading-relaxed">
               הכשרה מעשית לצוותים בכל הרמות - ממנהלים לעובדי קו ראשון
             </p>
 
-            <div className="space-y-3">
-              <p className="font-semibold text-foreground">מה תלמדו:</p>
-              <div className="space-y-2">
+            <div className="space-y-2">
+              <p className="font-semibold text-foreground text-sm">מה תלמדו:</p>
+              <div className="space-y-1.5">
                 {[
                   "שימוש מעשי בכלי GenAI למשימות יומיומיות",
                   "יצירת תכנים ויזואליים עם AI",
@@ -51,8 +51,8 @@ export function ServicesSection() {
                   "יישום מיידי במקום העבודה",
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-foreground/80">{item}</span>
+                    <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground/80">{item}</span>
                   </div>
                 ))}
               </div>
@@ -72,15 +72,15 @@ export function ServicesSection() {
               </div>
             </div>
 
-            <CTAButton href="/workshops" variant="primary" size="lg">
+            <CTAButton href="/workshops" variant="primary" size="default">
               הזמינו סדנה לארגון
             </CTAButton>
           </div>
         </div>
 
         {/* Service 2: Consulting */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1 space-y-6">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
+          <div className="order-2 lg:order-1 space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <Briefcase className="w-6 h-6 text-primary" />
@@ -103,8 +103,8 @@ export function ServicesSection() {
                   "מדידה ואופטימיזציה מתמשכת",
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span className="text-foreground/80">{item}</span>
+                    <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground/80">{item}</span>
                   </div>
                 ))}
               </div>
@@ -119,7 +119,7 @@ export function ServicesSection() {
               </ul>
             </div>
 
-            <CTAButton href="#contact" variant="primary" size="lg">
+            <CTAButton href="#contact" variant="primary" size="default">
               קבעו פגישת ייעוץ חינם
             </CTAButton>
           </div>
@@ -134,7 +134,7 @@ export function ServicesSection() {
         </div>
 
         {/* Service 3: Accelerator */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div>
             <ImagePlaceholder
               aspectRatio="video"
@@ -143,7 +143,7 @@ export function ServicesSection() {
             />
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <Rocket className="w-6 h-6 text-primary" />
@@ -198,7 +198,7 @@ export function ServicesSection() {
               </ul>
             </div>
 
-            <CTAButton href="/accelerator" variant="primary" size="lg">
+            <CTAButton href="/accelerator" variant="primary" size="default">
               התחילו את המסע
             </CTAButton>
           </div>

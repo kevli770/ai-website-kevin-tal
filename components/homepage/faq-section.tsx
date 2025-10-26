@@ -63,18 +63,18 @@ const faqs = [
 
 export function FAQSection() {
   return (
-    <SectionContainer spacing="lg" variant="darker" id="faq">
-      <div className="max-w-4xl mx-auto space-y-12">
-        <div className="text-center space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+    <SectionContainer spacing="md" variant="darker" id="faq">
+      <div className="max-w-4xl mx-auto space-y-8">
+        <div className="text-center space-y-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             שאלות נפוצות
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-base md:text-lg text-muted-foreground">
             התשובות לשאלות שכולם שואלים
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="w-full space-y-4">
+        <Accordion type="single" collapsible className="w-full space-y-3">
           {faqs.map((faq, index) => (
             <AccordionItem
               key={index}

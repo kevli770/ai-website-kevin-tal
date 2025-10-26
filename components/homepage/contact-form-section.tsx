@@ -10,8 +10,8 @@ import { Mail, Phone, Calendar, Youtube, MessageCircle } from "lucide-react";
 
 export function ContactFormSection() {
   return (
-    <SectionContainer spacing="lg" variant="gradient" id="contact">
-      <div className="max-w-7xl mx-auto">
+    <SectionContainer spacing="md" variant="gradient" id="contact">
+      <div className="max-w-5xl mx-auto">
         <div className="text-center space-y-3 mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white">
             בואו נתחיל לעבוד
@@ -21,10 +21,10 @@ export function ContactFormSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* Contact Form */}
-          <div className="glass rounded-2xl p-8 space-y-6">
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+          <div className="glass rounded-2xl p-8 space-y-3">
+            <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="fullName" className="text-foreground">
@@ -150,12 +150,12 @@ export function ContactFormSection() {
               className="rounded-2xl"
             />
 
-            <div className="glass rounded-xl p-6 space-y-6">
+            <div className="glass rounded-xl p-6 space-y-3">
               <h3 className="text-2xl font-bold text-foreground">
                 דרכי התקשרות נוספות
               </h3>
 
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                     <Mail className="w-5 h-5 text-primary" />

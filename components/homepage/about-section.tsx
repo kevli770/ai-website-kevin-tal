@@ -6,19 +6,19 @@ import { Bot, Zap, BarChart3, Sparkles, Target, Users } from "lucide-react";
 
 export function AboutSection() {
   return (
-    <SectionContainer spacing="lg" variant="accent" id="about">
-      <div className="max-w-7xl mx-auto space-y-16">
-        <div className="text-center space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+    <SectionContainer spacing="md" variant="accent" id="about">
+      <div className="max-w-5xl mx-auto space-y-8">
+        <div className="text-center space-y-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             מי אנחנו? <span className="text-primary">הצוות שיוביל אתכם למהפכת ה-AI</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
             שילוב ייחודי של יישום מעשי ואסטרטגיה ארגונית
           </p>
         </div>
 
         {/* Kevin Leaks Card */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div className="order-2 lg:order-1">
             <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-square">
               <Image
@@ -31,10 +31,10 @@ export function AboutSection() {
             </div>
           </div>
 
-          <div className="order-1 lg:order-2 space-y-6">
+          <div className="order-1 lg:order-2 space-y-3">
             <div>
               <h3 className="text-3xl font-bold text-foreground mb-2">קווין ליאקס</h3>
-              <p className="text-xl text-primary font-semibold">מומחה AI ו-BI לארגונים</p>
+              <p className="text-base md:text-lg text-primary font-semibold">מומחה AI ו-BI לארגונים</p>
             </div>
 
             <p className="text-lg text-foreground/90 leading-relaxed">
@@ -72,11 +72,11 @@ export function AboutSection() {
         </div>
 
         {/* Tal Hakooki Card */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
+          <div className="space-y-3">
             <div>
               <h3 className="text-3xl font-bold text-foreground mb-2">טל חקוקי</h3>
-              <p className="text-xl text-primary font-semibold">מנהיג AI אסטרטגי</p>
+              <p className="text-base md:text-lg text-primary font-semibold">מנהיג AI אסטרטגי</p>
             </div>
 
             <p className="text-lg text-foreground/90 leading-relaxed">

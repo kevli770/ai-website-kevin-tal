@@ -40,16 +40,16 @@ const steps = [
 
 export function ValuePropositionSection() {
   return (
-    <SectionContainer spacing="lg" variant="darker">
-      <div className="space-y-12">
+    <SectionContainer spacing="md" variant="darker">
+      <div className="space-y-8 max-w-5xl mx-auto">
         {/* Header */}
-        <div className="text-center space-y-6 max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold">
+        <div className="text-center space-y-3 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold">
             מה אני עושה{" "}
             <span className="gradient-text">בפועל</span>
             {" "}בארגונים
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-base md:text-lg text-muted-foreground">
             אני נכנס לארגון שלך לכשלושה חודשים.
             <br />
             יחד אנחנו ממפים, מיישמים ומעבירים לבעלות פנימית.
@@ -57,7 +57,7 @@ export function ValuePropositionSection() {
         </div>
 
         {/* Process Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
@@ -70,20 +70,20 @@ export function ValuePropositionSection() {
                   <div className="hidden md:block absolute top-20 right-0 w-full h-0.5 bg-gradient-to-l from-primary/50 to-transparent -z-10" />
                 )}
 
-                <div className="h-full p-8 rounded-xl glass border-2 border-border hover:border-primary/50 transition-all space-y-6 card-hover-glow">
+                <div className="h-full p-6 rounded-xl glass border-2 border-border hover:border-primary/50 transition-all space-y-4 card-hover-glow">
                   {/* Step number */}
-                  <div className="flex items-center gap-4">
-                    <div className="text-6xl font-bold text-primary/20">
+                  <div className="flex items-center gap-3">
+                    <div className="text-5xl font-bold text-primary/20">
                       {step.number}
                     </div>
-                    <Icon className="h-12 w-12 text-primary" />
+                    <Icon className="h-10 w-10 text-primary" />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold">{step.title}</h3>
+                  <h3 className="text-xl font-bold">{step.title}</h3>
 
                   {/* Points */}
-                  <ul className="space-y-3 text-muted-foreground">
+                  <ul className="space-y-2 text-muted-foreground">
                     {step.points.map((point, idx) => (
                       <li key={idx} className="flex items-start gap-3">
                         <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
@@ -108,8 +108,8 @@ export function ValuePropositionSection() {
         </div>
 
         {/* CTA */}
-        <div className="text-center pt-8">
-          <CTAButton href="#contact" size="xl">
+        <div className="text-center pt-4">
+          <CTAButton href="#contact" size="lg">
             אני רוצה שיחה על יישום AI בארגון שלי
           </CTAButton>
         </div>

@@ -6,13 +6,13 @@ import { Quote, TrendingUp, Users, CheckCircle2 } from "lucide-react";
 
 export function CaseStudySection() {
   return (
-    <SectionContainer spacing="lg" variant="accent">
-      <div className="max-w-7xl mx-auto space-y-12">
-        <div className="text-center space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+    <SectionContainer spacing="md" variant="accent">
+      <div className="max-w-5xl mx-auto space-y-8">
+        <div className="text-center space-y-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             סיפורי הצלחה מהשטח
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
             כך עזרנו לחברות מובילות להפוך AI לחלק מה-DNA הארגוני
           </p>
         </div>
@@ -28,7 +28,7 @@ export function CaseStudySection() {
               />
             </div>
 
-            <div className="p-8 lg:p-12 space-y-6">
+            <div className="p-8 lg:p-12 space-y-3">
               <div className="flex items-start gap-3">
                 <Quote className="w-8 h-8 text-primary shrink-0" />
                 <div>
@@ -39,7 +39,7 @@ export function CaseStudySection() {
                 </div>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <div className="glass rounded-lg p-4">
                   <p className="font-semibold text-primary mb-2">האתגר</p>
                   <p className="text-foreground/80">

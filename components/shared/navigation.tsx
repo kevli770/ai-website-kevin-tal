@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { CTAButton } from "@/components/shared/cta-button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Youtube, MessageCircle, Facebook } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "בית" },
@@ -28,6 +28,37 @@ export function Navigation() {
           >
             קווין & טל <span className="text-primary">AI</span>
           </Link>
+
+          {/* Social Media Icons - Desktop */}
+          <div className="hidden lg:flex items-center gap-3">
+            <a
+              href="https://youtube.com/@kevintal"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-red-500/10 hover:bg-red-500/20 transition-colors"
+              aria-label="YouTube"
+            >
+              <Youtube className="w-4 h-4 text-red-500" />
+            </a>
+            <a
+              href="https://chat.whatsapp.com/your-group-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-green-500/10 hover:bg-green-500/20 transition-colors"
+              aria-label="WhatsApp"
+            >
+              <MessageCircle className="w-4 h-4 text-green-500" />
+            </a>
+            <a
+              href="https://facebook.com/kevintal"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-blue-500/10 hover:bg-blue-500/20 transition-colors"
+              aria-label="Facebook"
+            >
+              <Facebook className="w-4 h-4 text-blue-500" />
+            </a>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
@@ -59,6 +90,37 @@ export function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden py-4 space-y-3 border-t border-border/50">
+            {/* Social Media Icons - Mobile */}
+            <div className="flex items-center justify-center gap-4 pb-2">
+              <a
+                href="https://youtube.com/@kevintal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-red-500/10 hover:bg-red-500/20 transition-colors"
+                aria-label="YouTube"
+              >
+                <Youtube className="w-5 h-5 text-red-500" />
+              </a>
+              <a
+                href="https://chat.whatsapp.com/your-group-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-green-500/10 hover:bg-green-500/20 transition-colors"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle className="w-5 h-5 text-green-500" />
+              </a>
+              <a
+                href="https://facebook.com/kevintal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-blue-500/10 hover:bg-blue-500/20 transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5 text-blue-500" />
+              </a>
+            </div>
+
             {navLinks.map((link) => (
               <Link
                 key={link.href}
