@@ -30,11 +30,11 @@ export function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-lg border-b border-border/50 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+        <div className="flex items-center justify-between h-16 gap-4">
+          {/* Logo - Center on mobile, right on desktop */}
           <Link
             href="/"
-            className="text-2xl font-bold text-white hover:text-cyan-400 transition-colors text-center"
+            className="text-xl sm:text-2xl font-bold text-white hover:text-cyan-400 transition-colors flex-shrink-0"
           >
             קווין & טל <span className="text-cyan-400">AI</span>
           </Link>
@@ -90,8 +90,9 @@ export function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-md text-white hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors"
+            className="lg:hidden p-2 rounded-md text-white hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors flex-shrink-0"
             aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>

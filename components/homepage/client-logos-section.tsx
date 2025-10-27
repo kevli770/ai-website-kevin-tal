@@ -26,13 +26,13 @@ export function ClientLogosSection() {
         </h2>
 
         {/* Infinite Scrolling Carousel */}
-        <div className="relative overflow-hidden w-full">
-          <div className="flex gap-12 animate-scroll">
+        <div className="relative overflow-x-hidden w-full">
+          <div className="flex gap-8 md:gap-12 animate-scroll">
             {duplicatedClients.map((client, index) => (
-              <div key={`${client}-${index}`} className="flex items-center justify-center shrink-0 w-28">
+              <div key={`${client}-${index}`} className="flex items-center justify-center shrink-0 w-20 md:w-28">
                 <ImagePlaceholder
-                  height="h-16"
-                  width="w-28"
+                  height="h-12 md:h-16"
+                  width="w-20 md:w-28"
                   label={client}
                   className="grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
                 />
@@ -48,7 +48,18 @@ export function ClientLogosSection() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(calc(-112px * 8 - 48px * 7));
+            transform: translateX(calc(-80px * 8 - 32px * 7));
+          }
+        }
+
+        @media (min-width: 768px) {
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(calc(-112px * 8 - 48px * 7));
+            }
           }
         }
 

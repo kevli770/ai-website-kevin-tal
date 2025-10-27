@@ -27,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="he" dir="rtl">
-      <body className={`${heebo.variable} ${inter.variable} font-sans`}>
+    <html lang="he" dir="rtl" className="overflow-x-hidden">
+      <body className={`${heebo.variable} ${inter.variable} font-sans overflow-x-hidden`}>
         <SuppressHydrationWarnings />
         {children}
       </body>
